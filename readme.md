@@ -1,6 +1,4 @@
 
-
-
 # Git & GitHub Tutorial By Umer Ali
 
 Welcome to this tutorial on using Git and GitHub! This guide will walk you through essential Git commands and how to interact with GitHub for version control and collaboration.
@@ -26,105 +24,106 @@ Welcome to this tutorial on using Git and GitHub! This guide will walk you throu
 ## Install Git
 
 ### Check Git Version
+
 Before you start using Git, ensure that it’s installed on your system:
+
 ```bash
-git --version
-
-
+`git --version`
+```
 
 ## SetUp Git(One-time Setup):
 Git requires you to set up your user identity for tracking purposes.
 
 ## Git Configuration:
 ```bash
-git config --global user.name "username"
-git config --global user.email "email"
-
+`git config --global user.name "username"`
+`git config --global user.email "email"`
+```
 ## check configuration :
 Check your Git configuration details:
 ```bash
-git config --global --list
-
+`git config --global --list`
+```
 ## Create local Repository:
 
 To create a new Git repository locally, navigate to your project folder and run:
 
 ```bash
-git init
-
+`git init`
+```
 ## Add File to the Repository:
 
 To start tracking a specific file:
 
 ```bash
-git add filename
-
+`git add filename`
+```
 -- To add all the files:
 
 ```bash
-git add .
-
+`git add .`
+```
 ## Check status of the files:
 
 View the status of files in the repository (whether they are staged, unstaged, or untracked):
 
 ```bash
-git status
-
+`git status`
+```
 ## Commit changes:
 
 Once files are staged, commit them to the repository with a descriptive message:
 
 ```bash
-git commit -m "message to be commited"
-
+`git commit -m "message to be commited"`
+```
 # Create the remote repository Through the terminal:
 
 Using GitHub CLI, log in and create a new repository:
 
 
 ```bash
-gh auth login
-gh create repo repositry-name --public
-gh create repo repository-name --private
-
+`gh auth login`
+`gh create repo repositry-name --public`
+`gh create repo repository-name --private`
+```
 
 ## Link your local repo to the remote repository:
 
 Once the remote repository is created, link it to your local repository:
 
 ```bash
-git remote add origin https://github.com/username/repository-name.git
-
+`git remote add origin https://github.com/username/repository-name.git`
+```
 ## Push local files to the remote repository:
 
 To upload your changes from the local repository to GitHub, push to the desired branch:
 
 ```bash
-git push origin branch-name
-
+`git push origin branch-name`
+```
 ## Rename the branch name:
 ```bash
-git branch -M master main
-
+`git branch -M master main`
+```
 -- change the branch from master to main.
 
 
 ## Push files with only one time branch mentioning
 ```bash
-git push -u origin main
-
+`git push -u origin main`
+```
 ## Take changes from the remote repository to the local :
 
 To sync your local repository with the remote one:
 
 ```bash
-git pull origin branch-name
-
+`git pull origin branch-name`
+```
 ## Check the commit changes history:
 ```bash
-git log
-
+`git log`
+```
 # Branches:
 
 ## Create branch:
@@ -132,54 +131,54 @@ git log
 Branching allows you to create new features or fix bugs without affecting the main branch:
 
 ```bash
-git checkout -b new-branch-name
-
+`git checkout -b new-branch-name`
+```
 ## Switches between branches:
 
 To switch back to another branch:
 
 ```bash
-git checkout branch-name
-
+`git checkout branch-name`
+```
 ## Merge 2 Branches:
 
 To merge changes from one branch into the current branch:
 
 ```bash
-git merge branch-name
-
--- This will merge the branch you mention to your current branch.
+`git merge branch-name`
+```
+This will merge the branch you mention to your current branch.
 
 ## Delete Branch:
 
 After merging, if you no longer need the branch, you can delete it:
 
 ```bash
-git branch -d branch-name
-
+`git branch -d branch-name`
+```
 ## Undo Changes:
 -- To unchange the files:
-``bash
-git reset file-name
-
+```bash
+`git reset file-name`
+```
 ## Undo all changes(not commited yet):
-git checkout --filename
-
+`git checkout --filename`
+```
 ## Adding .gitignore file
 
 -- gitignore file not push unneccessary files to your remote repo.
 for example:
-``bash
-.env
-node_module/
-
+```bash
+`.env`
+`node_module/`
+```
 # Push to remote repo (first time ever):
  
  If this is your first push to a new repository, you may need to set the upstream branch:
  
-``bash
-git push --set-upstream origin main
-
+```bash
+`git push --set-upstream origin main`
+```
 # Forking and Contributing to Other Repositories
 To contribute to other repositories:
 
